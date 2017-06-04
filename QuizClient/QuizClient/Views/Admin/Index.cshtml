@@ -1,6 +1,6 @@
-﻿
+﻿@model QuizClient.Models.LoginViewModel
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
 </head>
 <body>
 <div>
-    admin page
+    admin page + @Model.Message @Model.Username
 </div>
 </body>
 </html>

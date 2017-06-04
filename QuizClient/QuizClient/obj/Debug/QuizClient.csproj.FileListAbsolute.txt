@@ -87,3 +87,5 @@ D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.WebPages.Razor
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\obj\Debug\QuizClient.csprojResolveAssemblyReference.cache
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\obj\Debug\QuizClient.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\obj\Debug\QuizClient.pdb
+D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Communication.dll
+D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Communication.pdb

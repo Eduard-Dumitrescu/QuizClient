@@ -1,4 +1,4 @@
-﻿
+﻿@model QuizClient.Models.LoginViewModel
 @{
     ViewBag.Title = "Index";
     Layout = null;
@@ -11,20 +11,27 @@
 
 <div class="logo"></div>
 
-<form class="LoginBox">
+<form class="LoginBox" action="@Url.Action("Index","Login")" method="post">
     <div class="boxLine">
         <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1">Username</span>
-            <input type="text" class="form-control"  aria-describedby="basic-addon1">
+            <span class="input-group-addon">Username</span>
+            <input type="email" name="Username" class="form-control"  aria-describedby="basic-addon1" required>
         </div>
     </div>
     <div class="boxLine">
         <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1">Password</span>
-            <input type="text" class="form-control"  aria-describedby="basic-addon1">
+            <span class="input-group-addon">Password</span>
+            <input type="password" name="Password" class="form-control"  aria-describedby="basic-addon1" required>
         </div>
     </div>
     <div class="buttonBox">
-        <button type="button" class="btn btn-secondary">Login</button>
+        <button type="submit" class="btn btn-secondary">Login</button>
     </div>
 </form>
+
+@if (!String.IsNullOrEmpty(Model.Message))
+{
+    <div class="alert alert-danger">
+        <strong> @Model.Message</strong>
+    </div>
+}

@@ -1,0 +1,70 @@
+﻿html,body 
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.sideMenu 
+{
+    width: 12%;
+    height: 100%;
+    position: fixed;
+    background-color: #BC412B;
+    color: #B8D5B8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mainPage 
+{
+    width: 88%;
+    height: 120%;
+    margin-left: 12%;
+    z-index: 1;
+}
+
+
+.topSideMenu 
+{
+    width: 95%;
+    margin-left: 5%;
+    height: 40%;
+    font-size: 1.5vw;
+    font-family: monospace;
+    font-weight: 700;
+}
+
+.midSideMenu 
+{
+    width: 95%;
+    margin-left: 5%;
+    height: 70%;
+    font-size: 1.5vw;
+    font-family: monospace;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column; 
+}
+
+.botSideMenu 
+{
+    width: 95%;
+    margin-left: 5%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: monospace;
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+
+a 
+{
+    color: inherit !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}

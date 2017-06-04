@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Admin </title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminPage.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/knockout-3.4.2.js"></script>
+
+</head>
+<body>
+    <div class="sideMenu">
+        <div class="topSideMenu">
+            <a id="menuBtn">
+                <span class="glyphicon glyphicon-menu-hamburger"></span> Menu
+            </a>
+        </div>
+        <div class="midSideMenu">
+            <a href="@Url.Action("Index", "Admin")">
+                <span class="glyphicon glyphicon-home"></span> Home
+            </a>
+            <a href="@Url.Action("Questions", "Admin")">
+                <span class="glyphicon glyphicon-question-sign"></span> Questions
+            </a>
+            <a href="@Url.Action("Categories", "Admin")">
+                <span class="glyphicon glyphicon-th-list"></span> Categories
+            </a>
+            <a href="@Url.Action("Tests", "Admin")">
+                <span class="glyphicon glyphicon-folder-open"></span> Tests
+            </a>
+        </div>
+        <div class="botSideMenu">
+            <a href="@Url.Action("Logout", "Admin")">
+                <span class="glyphicon glyphicon-off"></span> Logout
+            </a>
+        </div>
+    </div>
+    <div class="mainPage">
+        @RenderBody()
+    </div>
+    <script src="~/Scripts/PageScripts/AdminPage.js"></script>
+</body>
+</html>
