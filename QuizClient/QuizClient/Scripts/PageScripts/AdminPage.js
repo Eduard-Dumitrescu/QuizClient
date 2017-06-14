@@ -4,6 +4,13 @@ var isOver = false;
 
 sideBtn.click(function (e) {
     if (isOver)
-        mainContainer.css("margin-left","12%");
-    alert(mainContainer.css("margin-left"));
+    {
+        mainContainer.animate({ marginLeft: "12%" });
+        isOver = false;
+    }
+    else
+    {
+        mainContainer.animate({ marginLeft: "2.9%" });
+        isOver = true;
+    }
 });

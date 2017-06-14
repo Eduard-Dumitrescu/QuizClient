@@ -12,7 +12,7 @@ namespace QuizClient.FilterAttribute
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
             var adminController = filterContext.Controller as AdminController;
-
+           
             if (!String.IsNullOrEmpty(adminController.checkCookie()))
                 filterContext.Result = adminController.AuthorizeRedirect();
         }

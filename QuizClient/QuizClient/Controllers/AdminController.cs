@@ -28,7 +28,7 @@ namespace QuizClient.Controllers
             return View(model);
         }
 
-        public ActionResult User()
+        public ActionResult Users()
         {
 
             return View();

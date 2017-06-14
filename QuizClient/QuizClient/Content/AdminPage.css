@@ -6,8 +6,16 @@
     padding: 0;
 }
 
+.layoutContainer 
+{
+    width: 100%;
+    height: 100%;
+    display: flex;   
+}
+
 .sideMenu 
 {
+    /*min-width: 160px;*/
     width: 12%;
     height: 100%;
     position: fixed;
@@ -18,12 +26,24 @@
     justify-content: space-between;
 }
 
+.container-fluid 
+{
+    margin-left: 1% !important;    
+}
+
+.glyphicon-remove 
+{
+    color: red;
+    cursor: pointer;    
+}
+
 .mainPage 
 {
-    width: 88%;
-    height: 120%;
+    width: 100%;
+    height: 100%;
     margin-left: 12%;
-    z-index: 1;
+    background-color: white;
+    z-index: 2;
 }
 
 
@@ -62,9 +82,86 @@
     font-weight: 700;
 }
 
+#addUserGroup 
+{
+    margin-top: 2%;    
+}
+
+#assignTestGroup 
+{
+    margin-top: 2%;    
+}
+
 a 
 {
     color: inherit !important;
     text-decoration: none !important;
     cursor: pointer;
+}
+
+hr {
+    color: blue;
+}
+
+table {
+        width: 100%;
+    }
+
+thead, tbody, tr, td, th { display: block; }
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 30px;
+
+    /*text-align: left;*/
+}
+
+tbody 
+{
+    height: 300px;
+    overflow-y: auto;
+}
+
+thead 
+{
+    /* fallback */
+}
+
+tbody td, thead th 
+{
+    width: 25%;
+    float: left;
+}
+
+.my-group .form-control
+{
+    width:50%;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.5); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(0,0,0,0.5); 
 }
