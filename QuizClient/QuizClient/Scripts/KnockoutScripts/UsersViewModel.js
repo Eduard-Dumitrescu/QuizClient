@@ -47,7 +47,39 @@ function UsersViewModel() {
     //    return total;
     //});
 
-    self.removeUser = function (user) { self.users.remove(user) }
+    self.removeUser = function (user)
+    {
+        var userData = new Object();
+        userData.UserId = user.UserId;
+
+        $.ajax({
+            url: 'http://localhost:12358/api/User',
+            headers: {
+                'Authorization': $.cookie('Authorization'),
+                'Content-Type': 'application/json'
+            },
+            method: 'DELETE',
+            data: JSON.stringify(userData),
+            datatype: "json"
+        }).done(function (data) {
+            self.refreshUsers();
+            self.refreshTests();
+            FadeInAlert();
+            self.messageCssClass("alert alert-success text-center");
+            self.alertMessage(data.Message);
+            alertBox.fadeOut(3000);
+        }).fail(function (jqXHR) {
+            console.log(jqXHR);
+            if (jqXHR.status === 400) {
+
+                FadeInAlert();
+                self.messageCssClass("alert alert-danger text-center");
+                self.alertMessage(jqXHR.responseJSON.Message);
+                alertBox.fadeOut(3000);
+            }
+        });
+        
+    }
 
     self.assignTest = function () {
         if (self.selectedUser() === undefined && self.selectedTest() === undefined) {
@@ -70,12 +102,38 @@ function UsersViewModel() {
             self.alertMessage("Please select a test");
             alertBox.fadeOut(3000);
         }
-        else
-        {
-            FadeInAlert();
-            self.messageCssClass("alert alert-success text-center");
-            self.alertMessage("User with email : " + self.selectedUser().Email + " has been assigned test : " + self.selectedTest().Email);
-            alertBox.fadeOut(3000);
+        else {
+            var data = new Object();
+            data.UserId = self.selectedUser().UserId;
+            data.TestId = self.selectedTest().Id;
+
+            $.ajax({
+                url: 'http://localhost:12358/api/Exam/AssignTest',
+                headers: {
+                    'Authorization': $.cookie('Authorization'),
+                    'Content-Type': 'application/json'
+                },
+                method: 'POST',
+                data: JSON.stringify(data),
+                datatype: "json"
+            }).done(function (data)
+            {
+                self.refreshUsers();
+                self.refreshTests();
+                FadeInAlert();
+                self.messageCssClass("alert alert-success text-center");
+                self.alertMessage(data.Message);
+                alertBox.fadeOut(3000);
+            }).fail(function (jqXHR) {
+                console.log(jqXHR);
+                if (jqXHR.status === 400)
+                {
+                    FadeInAlert();
+                    self.messageCssClass("alert alert-danger text-center");
+                    self.alertMessage(jqXHR.responseJSON.Message);
+                    alertBox.fadeOut(3000);
+                }
+            });
         }
       
     }
@@ -98,7 +156,8 @@ function UsersViewModel() {
             self.alertMessage("Please insert a vaild email address");
             alertBox.fadeOut(3000);
         }
-        else {
+        else
+        {
             var userEmail = new Object();
             userEmail.Email = self.emailInput();
             $.ajax({
@@ -120,15 +179,14 @@ function UsersViewModel() {
                 alertBox.fadeOut(3000);
             }).fail(function (jqXHR) {
                 console.log(jqXHR);
-                if (jqXHR.status === 400) {
+                if (jqXHR.status === 400)
+                {
               
                     FadeInAlert();
                     self.messageCssClass("alert alert-danger text-center");
                     self.alertMessage(jqXHR.responseJSON.Message);
                     alertBox.fadeOut(3000);
-                }
-                   
-               
+                }   
             });
            
         
