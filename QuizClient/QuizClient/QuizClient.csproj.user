@@ -9,6 +9,7 @@
     <WebStackScaffolding_LayoutPageFile>~/Views/Shared/_AdminLayout.cshtml</WebStackScaffolding_LayoutPageFile>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
+    <IISExpressSSLPort>44316</IISExpressSSLPort>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
@@ -16,15 +17,14 @@
         <WebProjectProperties>
           <StartPageUrl>
           </StartPageUrl>
-          <StartAction>CurrentPage</StartAction>
+          <StartAction>URL</StartAction>
           <AspNetDebugging>True</AspNetDebugging>
           <SilverlightDebugging>False</SilverlightDebugging>
           <NativeDebugging>False</NativeDebugging>
           <SQLDebugging>False</SQLDebugging>
           <ExternalProgram>
           </ExternalProgram>
-          <StartExternalURL>
-          </StartExternalURL>
+          <StartExternalURL>http://localhost:41093/Login/Index</StartExternalURL>
           <StartCmdLineArguments>
           </StartCmdLineArguments>
           <StartWorkingDirectory>

@@ -53,7 +53,7 @@ function UsersViewModel() {
         userData.UserId = user.UserId;
 
         $.ajax({
-            url: 'http://localhost:12358/api/User',
+            url: 'https://localhost:44361/api/User',
             headers: {
                 'Authorization': $.cookie('Authorization'),
                 'Content-Type': 'application/json'
@@ -108,7 +108,7 @@ function UsersViewModel() {
             data.TestId = self.selectedTest().Id;
 
             $.ajax({
-                url: 'http://localhost:12358/api/Exam/AssignTest',
+                url: 'https://localhost:44361/api/Exam/AssignTest',
                 headers: {
                     'Authorization': $.cookie('Authorization'),
                     'Content-Type': 'application/json'
@@ -161,7 +161,7 @@ function UsersViewModel() {
             var userEmail = new Object();
             userEmail.Email = self.emailInput();
             $.ajax({
-                url: 'http://localhost:12358/api/User',
+                url: 'https://localhost:44361/api/User',
                 headers: {
                     'Authorization': $.cookie('Authorization'),
                     'Content-Type': 'application/json'
@@ -196,7 +196,7 @@ function UsersViewModel() {
 
     self.refreshUsers = function() {
         $.ajax({
-            url: 'http://localhost:12358/api/User',
+            url: 'https://localhost:44361/api/User',
             headers: {
                 'Authorization': $.cookie('Authorization'),
                 'Content-Type': 'application/json'
@@ -209,7 +209,7 @@ function UsersViewModel() {
 
     self.refreshTests = function () {
         $.ajax({
-            url: 'http://localhost:12358/api/Test',
+            url: 'https://localhost:44361/api/Test',
             headers: {
                 'Authorization': $.cookie('Authorization'),
                 'Content-Type': 'application/json'

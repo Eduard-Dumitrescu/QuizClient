@@ -12,7 +12,7 @@
 }
 
 .LoginBox {
-    width: 40%;
+    /*width: 40%;*/
     height: 40%;
     background-color: #337357;
     border: 1px solid #6D9F71;
@@ -39,7 +39,6 @@
 
 .logo 
 {
-    width: 40%;
     height: 40%;
     background-image: url('../Images/TurtleLogo.png');
     background-repeat: no-repeat;

@@ -62,7 +62,10 @@ D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.ApplicationInsi
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.Web.Infrastructure.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Newtonsoft.Json.dll
+D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Net.Http.Formatting.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Helpers.dll
+D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Http.dll
+D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Http.WebHost.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Mvc.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Optimization.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Razor.dll
@@ -79,6 +82,9 @@ D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.AI.WindowsServe
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.ApplicationInsights.xml
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Newtonsoft.Json.xml
+D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Net.Http.Formatting.xml
+D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Http.xml
+D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Http.WebHost.xml
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Helpers.xml
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Mvc.xml
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Optimization.xml
@@ -89,9 +95,3 @@ D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.WebPages.Razor
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\obj\Debug\QuizClient.csprojResolveAssemblyReference.cache
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\obj\Debug\QuizClient.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\obj\Debug\QuizClient.pdb
-D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Net.Http.Formatting.dll
-D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Http.dll
-D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Http.WebHost.dll
-D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Net.Http.Formatting.xml
-D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Http.xml
-D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Http.WebHost.xml

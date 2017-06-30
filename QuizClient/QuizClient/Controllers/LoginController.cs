@@ -9,13 +9,14 @@ using QuizClient.Models;
 
 namespace QuizClient.Controllers
 {
+   
     public class LoginController : Controller
     {
         private LoginApplication _loginApplication;
 
         public LoginController()
         {
-            _loginApplication = new LoginApplication("http://localhost:12358/api");
+            _loginApplication = new LoginApplication("https://localhost:44361/api");
         }
 
         // GET: Login

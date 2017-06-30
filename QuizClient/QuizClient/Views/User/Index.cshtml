@@ -8,11 +8,79 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/knockout-3.4.2.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/UserPages/TestPage.css" rel="stylesheet" />
+    <link rel="manifest" href="/manifest.json">
     <title>Index</title>
 </head>
 <body>
-<div>
-    User Page
-</div>
+
+    <div class="container-fluid" id="mainContainer">
+        <div class="row">
+            <div class="col-lg-offset-1 col-md-offset-1 col-lg-4 col-md-4 col-sm-5 col-xs-5">
+                <h1 id="timerContainer">  <span class="label label-primary"> 02:12:20 </span> </h1>
+            </div>
+            <div class="col-lg-offset-2 col-md-offset-2 col-lg-4 col-md-4 col-sm-offset-2 col-xs-offset-2 col-sm-5 col-xs-5">
+                <button class="btn btn-primary btn-lg pull-right"> Finish Test</button>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-lg-offset-1 col-md-offset-1 col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                <div class="btn-group btn-group-justified" data-bind="foreach: technologyList">
+                    <a class="btn btn-primary" data-bind="text: Name,click:$root.changeTechnology"></a>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="container" id="questionContainer">
+
+            <div class="row">
+                <div class="col-lg-offset-1 col-md-offset-1 col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                    <div class="jumbotron">
+                        <h3> Which of the following access specifier in C# allows a class to expose its member variables and member functions to other functions and objects in the current assembly? </h3>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value=""> A - Public </label>
+                            <label><input type="checkbox" value=""> B - Private </label>
+                            <label><input type="checkbox" value=""> C - Protected </label>
+                            <label><input type="checkbox" value=""> D - Internal </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-1 col-md-offset-1 col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                    <div class="jumbotron">
+                        <h3> Function overloading is a kind of static polymorphism. </h3>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value=""> A - true </label>
+                            <label><input type="checkbox" value=""> B - false </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-1 col-md-offset-1 col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                    <div class="jumbotron">
+                        <h3>C# supports multiple inheritance. </h3>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value=""> A - true  </label>
+                            <label><input type="checkbox" value=""> B - false </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="~/Scripts/PageScripts/UserPage.js"></script>
+    <script src="~/Scripts/KnockoutScripts/TestViewModel.js"></script>
 </body>
 </html>

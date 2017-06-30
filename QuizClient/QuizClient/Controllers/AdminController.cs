@@ -9,6 +9,7 @@ using QuizClient.Models;
 
 namespace QuizClient.Controllers
 {
+  
     public class AdminController : Controller
     {
         private UserSessionApplication _userSession;
@@ -16,7 +17,7 @@ namespace QuizClient.Controllers
 
         public AdminController()
         {
-            _userSession = new UserSessionApplication("http://localhost:12358/api");
+            _userSession = new UserSessionApplication("https://localhost:44361/api");
         }
         
         //[AuthorizeAdmin]

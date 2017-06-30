@@ -1,0 +1,14 @@
+﻿{
+  "name": "QuizApp",
+  "description": "Pithy description (132 characters or less, no HTML)",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "app": {
+    "urls": [
+      "http://localhost:41093/user/index"
+    ],
+    "launch": {
+      "web_url": "http://localhost:41093/user/index"
+    }
+  }
+}

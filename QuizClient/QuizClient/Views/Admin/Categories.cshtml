@@ -4,7 +4,89 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+<link href="~/Content/AdminPages/CategoryPage.css" rel="stylesheet" />
+
 <div class="page-header">
     <h1> Categories </h1>
 </div>
+
+<div class="container-fluid">
+    <form class="row">
+        <div class="col-lg-offset-1 col-md-offset-1 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    
+            <div class="input-group">
+                <span class="input-group-addon"> Category </span>
+                <input type="email" class="form-control" placeholder="Insert category name" data-bind="value: $root.categoryInput" required>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" data-bind="click: $root.addCategory">
+                        Submit
+                    </button>
+                </span>
+            </div>
+
+            <br/>
+            
+            <div class="table-responsive">
+                <table class="table table-condensed table-hover">
+                    <thead>
+                    <tr>
+                        <th class="text-center"> Category name </th>
+                        <th class="text-center"></th>
+                    </tr>
+                    </thead>
+                    <tbody data-bind="foreach: categoryList">
+                    <tr>
+                        <td class="text-center" data-bind="text: Name"> </td>
+                        <td class="text-center"><span class="glyphicon glyphicon-remove" data-bind="click: $root.removeCategory"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+         
+        <div class="col-lg-offset-1 col-md-offset-1 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            
+            <div class="input-group">
+                <span class="input-group-addon"> Difficulty </span>
+                <input type="email" class="form-control" placeholder="Insert difficulty level" data-bind="value: $root.difficultyInput" required>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" data-bind="click: $root.addDifficulty">
+                        Submit
+                    </button>
+                </span>
+            </div>
+
+            <br/>
+
+            <div class="table-responsive">
+                <table class="table table-condensed table-hover">
+                    <thead>
+                    <tr>
+                        <th class="text-center"> Difficulty level </th>
+                        <th class="text-center"></th>
+                    </tr>
+                    </thead>
+                    <tbody data-bind="foreach: difficultyList">
+                    <tr>
+                        <td class="text-center" data-bind="text: Name"> </td>
+                        <td class="text-center"><span class="glyphicon glyphicon-remove" data-bind="click: $root.removeDifficulty"></span></td>
+                    </tr>
+                   
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+    <div class="row" id="displayMessage">
+
+        <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-2 col-xs-offset-2 col-lg-5 col-md-5 col-sm-8 col-xs-8">
+            <div data-bind="css : $root.messageCssClass()">
+                <strong data-bind="text: $root.alertMessage"> </strong>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 <script src="~/Scripts/KnockoutScripts/CategoriesViewModel.js"></script>

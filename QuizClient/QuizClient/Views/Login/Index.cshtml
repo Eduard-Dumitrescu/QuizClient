@@ -9,29 +9,39 @@
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <link href="~/Content/LoginPage.css" rel="stylesheet" />
 
-<div class="logo"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-offset-3 col-md-offset-3 col-lg-6 col-md-6 col-xs-12 col-sm-12">
 
-<form class="LoginBox" action="@Url.Action("Index","Login")" method="post">
-    <div class="boxLine">
-        <div class="input-group">
-            <span class="input-group-addon">Username</span>
-            <input type="email" name="Username" class="form-control"  aria-describedby="basic-addon1" required>
+
+
+            <div class="logo"></div>
+
+            <form class="LoginBox" action="@Url.Action("Index","Login")" method="post">
+                <div class="boxLine">
+                    <div class="input-group">
+                        <span class="input-group-addon">Username</span>
+                        <input type="email" name="Username" class="form-control" aria-describedby="basic-addon1" required>
+                    </div>
+                </div>
+                <div class="boxLine">
+                    <div class="input-group">
+                        <span class="input-group-addon">Password</span>
+                        <input type="password" name="Password" class="form-control" aria-describedby="basic-addon1" required>
+                    </div>
+                </div>
+                <div class="buttonBox">
+                    <button type="submit" class="btn btn-secondary">Login</button>
+                </div>
+            </form>
+
+            @if (!String.IsNullOrEmpty(Model.Message))
+            {
+                <div class="alert alert-danger">
+                    <strong> @Model.Message</strong>
+                </div>
+            }
+
         </div>
     </div>
-    <div class="boxLine">
-        <div class="input-group">
-            <span class="input-group-addon">Password</span>
-            <input type="password" name="Password" class="form-control"  aria-describedby="basic-addon1" required>
-        </div>
-    </div>
-    <div class="buttonBox">
-        <button type="submit" class="btn btn-secondary">Login</button>
-    </div>
-</form>
-
-@if (!String.IsNullOrEmpty(Model.Message))
-{
-    <div class="alert alert-danger">
-        <strong> @Model.Message</strong>
-    </div>
-}
+</div>

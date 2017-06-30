@@ -18,7 +18,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44316</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -174,7 +174,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\AdminPage.css" />
+    <Content Include="Content\AdminPages\AdminPage.css" />
+    <Content Include="Content\AdminPages\CategoryPage.css" />
+    <Content Include="Content\AdminPages\UsersPage.css" />
     <Content Include="Content\bootstrap-select.css" />
     <Content Include="Content\bootstrap-select.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -182,6 +184,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\LoginPage.css" />
+    <Content Include="Content\UserPages\TestPage.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -200,6 +203,7 @@
     <Content Include="Scripts\bootstrap-select.js" />
     <Content Include="Scripts\bootstrap-select.js.map" />
     <Content Include="Content\bootstrap-select.css.map" />
+    <Content Include="manifest.json" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Images\TurtleLogo.png" />
     <Content Include="Scripts\bootstrap-select.min.js" />
@@ -282,14 +286,19 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\knockout-3.4.2.debug.js" />
     <Content Include="Scripts\knockout-3.4.2.js" />
+    <Content Include="Scripts\KnockoutScripts\CategoriesViewModel.js" />
+    <Content Include="Scripts\KnockoutScripts\QuestionsViewModel.js" />
+    <Content Include="Scripts\KnockoutScripts\TestViewModel.js" />
     <Content Include="Scripts\KnockoutScripts\UsersViewModel.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\PageScripts\AdminPage.js" />
+    <Content Include="Scripts\PageScripts\UserPage.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="service-worker.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -345,7 +354,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>41093</DevelopmentServerPort>
+          <DevelopmentServerPort>44362</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:41093/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

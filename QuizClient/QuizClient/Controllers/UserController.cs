@@ -8,13 +8,14 @@ using QuizClient.FilterAttribute;
 
 namespace QuizClient.Controllers
 {
+   
     public class UserController : Controller
     {
         public string controllerRedirect { get; set; }
 
 
         // GET: User
-        [AuthorizeUser]
+        //[AuthorizeUser]
         public ActionResult Index()
         {
             return View();
@@ -34,7 +35,7 @@ namespace QuizClient.Controllers
             if (cookie == null)
                 return "Login";
 
-            var userSession = new UserSessionApplication("http://localhost:12358/api");
+            var userSession = new UserSessionApplication("https://localhost:44361/api");
             var userSessionData = userSession.GetSessionData("/UserSession", new Guid(cookie.Value));
 
             if (!userSessionData.IsActive)
