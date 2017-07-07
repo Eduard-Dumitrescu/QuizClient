@@ -4,24 +4,217 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+<link href="~/Content/AdminPages/QuestionsPage.css" rel="stylesheet" />
+
 <div class="page-header">
- 
+
     <h1> Questions </h1>
- 
+
 </div>
 
-<div class="container-fluid">
-    <button type="button" class="btn btn-default">
-        <span class="glyphicon glyphicon-th-list"></span>
-    </button>
-    <button type="button" class="btn btn-default">
-        <span class="glyphicon glyphicon-plus"></span>
-    </button>
-</div>
 
-<div class="row">
+<button type="button" class="btn btn-default">
+    <span class="glyphicon glyphicon-th-list"></span>
+</button>
+<button type="button" class="btn btn-default">
+    <span class="glyphicon glyphicon-plus"></span>
+</button>
+
+<br/>
+<br/>
+
+<form class="container-fluid" id="addQuestionContainer">
     
-</div>
+    <div class="row">
+        
+        <div class="col-lg-7 col-md-5 col-xs-10 col-sm-10">
+
+            <div class="input-group">
+                <span class="input-group-addon"> Question </span>
+                <input type="text" data-bind="value: questionTextInput" class="form-control" aria-describedby="basic-addon1" required>
+            </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-xs-10 col-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon"> Question Type </span>
+                <select class="form-control" data-bind="options: questionTypeList,optionsText: 'Name',value: selectedQuestionType">
+                  
+                </select>
+            </div>
+        </div>
+
+    </div>
+    
+    <br/>
+    
+    <div class="row">
+        
+        <div class="col-lg-5 col-md-5 col-xs-10 col-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon"> Difficulty </span>
+                <select class="form-control" data-bind="options: difficultyList,optionsText: 'Name',value: selectedDifficulty">
+                   
+                </select>
+            </div>
+        </div>
+
+        <div class="col-lg-5 col-md-5 col-xs-10 col-sm-10">
+            <div class="input-group">
+                <span class="input-group-addon"> Subject </span>
+                <select class="form-control" data-bind="options: subjectList,optionsText: 'Name',value: selectedSubject">
+                 
+                </select>
+            </div>
+        </div>
+
+    </div>
+    
+    <br/>
+    
+    <div class="container-fluid" data-bind="foreach: answersList">
+
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-10">
+                <div class="input-group">
+                    <span class="input-group-addon"> Answer text </span>
+                    <input type="text" data-bind="value: AnswerText" class="form-control" aria-describedby="basic-addon1" required>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-xs-12 col-sm-10">
+
+                <div class="input-group">
+                    <span class="input-group-addon"> Answer value </span>
+                    <select class="form-control" data-bind="value: AnswerValue">
+                        <option value="false"> false </option>
+                        <option value="true"> true </option>
+                    </select>
+                </div>
+
+            </div>
 
 
+            <div class="col-lg-1 col-md-1 col-xs-2 col-sm-2">
+                <a href="#">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </a>
+            </div>
 
+        </div>
+
+        @*<div class="row">
+
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-10">
+                <div class="input-group">
+                    <span class="input-group-addon"> Answer text </span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon1" required>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-xs-12 col-sm-10">
+
+                <div class="input-group">
+                    <span class="input-group-addon"> Answer value </span>
+                    <select class="form-control" data-bind="options: users,optionsText: 'Email',value: selectedUser,optionsCaption: 'Available Users'">
+                        <option> true </option>
+                        <option> false </option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-1 col-md-1 col-xs-2 col-sm-2">
+                <a href="#">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-10">
+                <div class="input-group">
+                    <span class="input-group-addon"> Answer text </span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon1" required>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-xs-12 col-sm-10">
+
+                <div class="input-group">
+                    <span class="input-group-addon"> Answer value </span>
+                    <select class="form-control" data-bind="options: users,optionsText: 'Email',value: selectedUser,optionsCaption: 'Available Users'">
+                        <option> true </option>
+                        <option> false </option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-1 col-md-1 col-xs-2 col-sm-2">
+                <a href="#">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-10">
+                <div class="input-group">
+                    <span class="input-group-addon"> Answer text </span>
+                    <input type="text" class="form-control" aria-describedby="basic-addon1" required>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-3 col-xs-12 col-sm-10">
+
+                <div class="input-group">
+                    <span class="input-group-addon"> Answer value </span>
+                    <select class="form-control" data-bind="options: users,optionsText: 'Email',value: selectedUser,optionsCaption: 'Available Users'">
+                        <option> true </option>
+                        <option> false </option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-1 col-md-1 col-xs-2 col-sm-2">
+                <a href="#">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </a>
+            </div>
+
+        </div>*@
+
+    </div>
+
+    <br/>
+
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+            <button id="singlebutton" name="singlebutton" class="btn btn-primary" data-bind="click: $root.addQuestion"> Add Question </button>
+        </div>
+    </div>
+  
+    <div class="row" id="displayMessage">
+
+        <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-2 col-xs-offset-2 col-lg-5 col-md-5 col-sm-8 col-xs-8">
+            <div data-bind="css : $root.messageCssClass()">
+                <strong data-bind="text: $root.alertMessage"> </strong>
+            </div>
+        </div>
+
+    </div>
+    
+</form>
+
+<script src="~/Scripts/KnockoutScripts/QuestionsViewModel.js"></script>

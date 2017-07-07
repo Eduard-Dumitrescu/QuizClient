@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/jquery.cookie-1.4.1.min.js"></script>
+    <script src="~/Scripts/knockout-3.4.2.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>StartPage</title>
+ 
+</head>
+<body>
+
+<div class="container text-center">
+    <button class="btn btn-primary btn-lg" onclick="startTest()"> Start Quizz </button>
+</div>
+
+<script>
+    
+    function startTest()
+    {
+        $.ajax({
+            url: 'https://localhost:44361/api/Exams/StartTimer',
+            headers: {
+                'Authorization': $.cookie('Authorization'),
+                'Content-Type': 'application/json'
+            },
+            method: 'PUT'
+        }).done(function (data) {
+           
+            window.location.href="@Url.Action("Index", "User")";
+        });
+       
+    }
+   
+</script>
+
+</body>
+</html>

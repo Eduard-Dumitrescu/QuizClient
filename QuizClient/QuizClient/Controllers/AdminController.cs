@@ -20,7 +20,7 @@ namespace QuizClient.Controllers
             _userSession = new UserSessionApplication("https://localhost:44361/api");
         }
         
-        //[AuthorizeAdmin]
+        [AuthorizeAdmin]
         public ActionResult Index()
         {
        
@@ -52,8 +52,8 @@ namespace QuizClient.Controllers
 
         public ActionResult Logout()
         {
-            _userSession.EndSession("/EndSession",new Guid(Request.Cookies["Authorization"].ToString()));
-            return RedirectToAction("Index", "Home");
+            _userSession.EndSession("/EndSession",new Guid(Request.Cookies["Authorization"].Value));
+            return RedirectToAction("Index", "Login");
         }
 
         public  ActionResult AuthorizeRedirect()

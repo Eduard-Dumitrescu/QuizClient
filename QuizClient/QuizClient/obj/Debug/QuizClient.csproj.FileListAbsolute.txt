@@ -1,3 +1,4 @@
+D:\School\Licenta\QuizClient\QuizClient\QuizClient\obj\Debug\QuizClient.csprojResolveAssemblyReference.cache
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\ApplicationInsights.config
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\roslyn\csc.exe
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\roslyn\csc.exe.config
@@ -59,9 +60,11 @@ D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.AI.ServerTeleme
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.AI.Web.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.AI.WindowsServer.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.ApplicationInsights.dll
+D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.AspNet.TelemetryCorrelation.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.Web.Infrastructure.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Newtonsoft.Json.dll
+D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Diagnostics.DiagnosticSource.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Net.Http.Formatting.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Helpers.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Http.dll
@@ -80,8 +83,10 @@ D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.AI.ServerTeleme
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.AI.Web.xml
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.AI.WindowsServer.xml
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.ApplicationInsights.xml
+D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\Newtonsoft.Json.xml
+D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Diagnostics.DiagnosticSource.xml
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Net.Http.Formatting.xml
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Http.xml
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Http.WebHost.xml
@@ -92,6 +97,5 @@ D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.Razor.xml
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.WebPages.xml
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.WebPages.Deployment.xml
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\bin\System.Web.WebPages.Razor.xml
-D:\School\Licenta\QuizClient\QuizClient\QuizClient\obj\Debug\QuizClient.csprojResolveAssemblyReference.cache
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\obj\Debug\QuizClient.dll
 D:\School\Licenta\QuizClient\QuizClient\QuizClient\obj\Debug\QuizClient.pdb

@@ -48,7 +48,7 @@ namespace QuizClient.Controllers
                 Password = model.Password
             };
 
-            var response = _loginApplication.Login("/user", user);
+            var response = _loginApplication.Login("/user/login", user);
 
             if (response.StatusCode != 200)
             {
@@ -62,7 +62,7 @@ namespace QuizClient.Controllers
             if (response.Message.Equals("Admin"))
                 return RedirectToAction("Index", "Admin");
 
-            return RedirectToAction("Index", "User");
+            return RedirectToAction("StartPage", "User");
         }
     }
 }

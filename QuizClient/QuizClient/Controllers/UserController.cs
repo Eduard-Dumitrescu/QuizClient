@@ -15,8 +15,13 @@ namespace QuizClient.Controllers
 
 
         // GET: User
-        //[AuthorizeUser]
+        [AuthorizeUser]
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult StartPage()
         {
             return View();
         }
